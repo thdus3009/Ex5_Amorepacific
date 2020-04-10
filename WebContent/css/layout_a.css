@@ -1,0 +1,275 @@
+@charset "UTF-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+/*******************header시작*******************/
+header {
+	width: 100%;
+	height: 60px;
+	min-width: 1000px;
+	/*margin-bottom:100px; > 이렇게해도 d2가 떨어진다.*/
+	background-color: #032961;
+	position: fixed; /*메뉴바를 상단에 고정*/
+	top: 0px;
+}
+
+.header_nav { /*이거부터 설정해놔야 화면 줄일때 글씨줄바꿈되는 경우를 막을 수 있음*/
+	width: 50%;
+	height: 60px;
+	min-width: 1200px;
+	margin: 0 auto;
+}
+
+.logo {
+	margin-left: 20px;
+	padding: 20px;
+	width: 15%;
+	height: 60px;
+	display: inline-block;
+	float: left;
+	box-sizing: border-box;
+}
+
+/****************************************************/
+.nav_main {
+	width: 50%;
+	height: 60px;
+	float: right;
+}
+
+ul.list_hea1 {
+	
+}
+
+ul.list_hea1>li {
+	height: 60px;
+	float: left;
+	list-style: none; /*리스트 앞에 붙는 장식 유무*/
+	color: white;
+	font-family: "Georgia";
+	margin-top: 21px;
+	margin-right: 20px;
+}
+
+.a { /*이거 설정하는 이유 : a태그엔 설정값이 있어서 밑줄&파란색 , 클릭하면 보라색으로 바뀐다*/
+	color: white;
+	text-decoration: none;
+}
+
+.a:hover { /*hover : 마우스를 올렸을때*/
+	color: #aec7eb;
+}
+/****************************************************/
+.nav_sub {
+	width: 14%;
+	height: 60px;
+	float: right; 
+	display : inline-block;
+	box-sizing: border-box;
+}
+
+ul.list_hea2 {
+	
+}
+
+ul.list_hea2>li {
+	float: left; /*이거덕분에 옆으로 쌓일 수 있음*/
+	list-style: none;
+	color: white;
+	margin-top: 20px;
+	font-size: small;
+}
+
+.b {
+	color: white;
+	text-decoration: none;
+}
+
+.c {
+	color: #aec7eb;
+	text-decoration: none;
+	font-size: xx-small;
+	opacity: 0.5;
+}
+
+/****************************************************/
+/*******************header끝*******************/
+
+/********************contents시작*********************/
+.contents_1 {
+	width: 1600px;
+	height: 600px;
+	margin: 0px auto;
+	background-color: black;
+	min-width: 1200px;
+	overflow: hidden; /* margin-top버그 > 부모요소에 overflow : hidden 을 적용*/
+}
+.contents_1_sub {
+	width: 100%;
+	height: 100%;}
+
+/****************************************************/
+.contents_2 {
+	width: 100%;
+	height: 80px;
+	margin: 0px auto;
+	background-color: #f5f6f7;
+	min-width: 1200px;
+	overflow: hidden; /* margin-top버그 > 부모요소에 overflow : hidden 을 적용*/
+}
+.contents_2_nav{
+	width: 50%;
+	height: 80px;
+	min-width: 1200px;
+	margin: 0 auto;
+	background-color: #f5f6f7;
+}
+
+ul.list_con2{
+	margin-left: 87px;
+}
+ul.list_con2>li{
+	list-style: none;
+}
+
+.d{
+	background-color : #f5f6f7;
+	width: 32%;
+	height : 80px;
+	float: left; /*이거덕분에 옆으로 쌓일 수 있음*/
+	font-size: larger;
+	font-family: "Georgia";
+	color: gray;
+	text-decoration: none;
+	display : inline-block;
+	box-sizing: border-box;
+	padding-left: 50px;
+	padding-top: 30px;
+	
+}
+.dd{
+	background-color : #f5f6f7;
+	width: 32%;
+	height : 80px;
+	float: left; /*이거덕분에 옆으로 쌓일 수 있음*/
+	font-size: larger;
+	font-family: "Georgia";
+	color: black;
+	text-decoration: none;
+	display : inline-block;
+	box-sizing: border-box;
+	padding-left: 50px;
+	padding-top: 30px;
+	
+}
+/****************************************************/
+.contents_3 {
+	width: 1150px;
+	height: 620px;
+	margin: 0px auto; /*수평정렬(가로)*/
+	background-color: white;
+	min-width: 900px;
+	overflow: hidden; /* margin-top버그 > 부모요소에 overflow : hidden 을 적용*/
+}
+
+.contents_3_name {
+	float: left;
+	list-style: none;
+	color: black;
+	margin-top: 100px;
+	font-size: xx-large;
+	font-family: "Georgia";
+}
+
+
+.contents_3_sub {
+	width: 100%;
+	height: 310px;
+	margin-top: 185px;
+	background-color: white;
+}
+
+.contents_3_sub_0 {
+	width: 21%;
+	height: 100%;
+	background-color: pink;
+	float: left;
+}
+
+.contents_3_sub_1 {
+	width: 5.3%;
+	height: 100%;
+	background-color: white;
+	float: left;
+}
+/****************************************************/
+.contents_4 {
+	width: 1920px;
+	height: 520px;
+	background-color: #10579c;
+	min-width: 1200px;
+	overflow: hidden; /* margin-top버그 > 부모요소에 overflow : hidden 을 적용*/
+}
+
+.contents_4_sub {
+	width: 1345px;
+	height: 413px;
+	margin: 90px 410px;
+	
+}
+
+/********************contents끝*********************/
+
+/********************footer시작********************/
+footer{
+	width: 73%;
+	height: 250px;
+	background-color: white;
+	min-width: 1200px;
+	overflow: hidden;
+	margin: 0 auto; /*수평정렬*/
+	mar
+}
+.footer_nav {
+	background-color: white;
+	width: 1200px;
+	height: 80px;
+	margin : 0 auto;
+	min-width: 1200px;
+	overflow : hidden;
+}
+
+ul.list_foot{
+	list-style: none;
+	width: 100%;
+	height : 200px;
+	float: left; /*이거덕분에 옆으로 쌓일 수 있음*/
+	font-size: small;
+	color: gray;
+	text-decoration: none;
+	display : inline-block;
+	box-sizing: border-box;
+	margin-left: 260px;
+	margin-top: 50px;
+
+	}
+ul.list_foot>li{
+	float: left;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+.e{
+	font-size: x-small;
+	color : #dfe2e6;
+}
+.img{
+	margin-left: 610px;
+}
+.since{
+	font-size: small;
+	color: gray;
+	 margin-left: 530px;	
+}
+/********************footer끝********************/

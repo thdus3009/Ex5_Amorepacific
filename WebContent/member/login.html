@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="../css/layout_login.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<!-- -----------------header시작------------------- -->
+	<header class="header">
+		<div class="header_nav">
+			<!-- 로고 -->
+			<div class="logo">
+				<!-- 메인홈: 절대경로 써주기 -->
+				<a href="/Ex5_Amorepacific/index_a.html"><img alt="logo"
+					src="../image\amorepacific.png"
+					style="width: 170px; height: 16.5px;"></a>
+			</div>
+			<!-- 서브메뉴 -->
+			<nav class="nav_sub">
+				<ul class="list_hea2">
+					<li><a class="b" href="https://www.apgroup.com/int/ko/misc/news/news.html"> NEWS &nbsp;</a></li>
+					<li><a class="c">|</a></li>
+					<li><a class="b" href="/Ex5_Amorepacific/member/join.html">&nbsp;
+							JOIN</a></li>
+					<!-- 절대경로 -->
+
+				</ul>
+			</nav>
+			<!-- 메인메뉴 -->
+			<nav class="nav_main">
+				<ul class="list_hea1">
+					<li><a class="a" href="#">ABOUT US</a></li>
+					<li><a class="a" href="#">OUR VALUES</a></li>
+					<li><a class="a" href="#">BRANDS</a></li>
+					<li><a class="a" href="#">SUSTAINABILITY</a></li>
+					<li><a class="a" href="#">INVESTORS</a></li>
+				</ul>
+			</nav>
+
+
+
+		</div>
+	</header>
+	<!-- ----------------header 끝-------------------- -->
+	<!-- ----------------contents시작-------------------- -->
+	<div class="contents_3">
+		<div class="contents_3_sub">
+			<div class="contents_3_name">로그인</div>
+			<div class="line"></div>
+			<div class="explain">
+				아모레퍼시픽 이용을 위해서는 <br>로그인이 필요합니다.
+			</div>
+	<!-- ----------------id폼 시작-------------------- -->
+			<div class="br">
+			<form method="post" id="authForm"
+				action="https://www.tistory.com/auth/login">
+				<input type="hidden" name="redirectUrl"
+					value="https://blogpack.tistory.com/manage">
+				<fieldset>
+					<legend class="screen_out">로그인 정보 입력폼</legend>
+					<div class="box_login">
+						<div class="inp_text">
+							<label for="loginId" class="screen_out">아이디</label> <input
+								type="email" id="loginId" name="loginId" placeholder="ID">
+						</div>
+						<br>
+						<div class="inp_text">
+							<label for="loginPw" class="screen_out">비밀번호</label> <input
+								type="password" id="loginPw" name="password"
+								placeholder="Password">
+						</div>
+					</div>
+					<button type="submit" class="btn_login" disabled>로그인</button>
+					<div class="login_append">
+						<div class="inp_chk">
+							<!-- 체크시 checked 추가 -->
+							<input type="checkbox" id="keepLogin" 
+								name="keepLogin"> <label for="keepLogin" class="lab_g">
+								<span class="img_top ico_check"></span> <span class="txt_lab">로그인
+									상태 유지</span>
+							</label>
+						</div>
+						<span class="txt_find"> <a href="/member/find/loginId"
+							class="link_find">아이디</a> / <a href="/member/find/password"
+							class="link_find">비밀번호 찾기</a>
+						</span>
+					</div>
+
+				</fieldset>
+			</form></div>
+<!-- ----------------id폼 끝-------------------- -->
+		</div>
+	</div>
+
+	<!-- -----------------contents끝------------------- -->
+	<!-- ------------------footer시작------------------ -->
+	<footer class="footer">
+		<div class="footer_nav">
+			<ul class="list_foot">
+				<li>인재채용</li>
+				<li class="e">|</li>
+				<li>고객상담실</li>
+				<li class="e">|</li>
+				<li>방문판매원 찾기</li>
+				<li class="e">|</li>
+				<li>매거진</li>
+				<li class="e">|</li>
+				<li>사이트맵</li>
+				<li class="e">|</li>
+				<li>관련사이트</li>
+				<li class="e">|</li>
+				<li>법적 고지</li>
+				<li class="e">|</li>
+				<li>개인정보 처리방침</li>
+			</ul>
+		</div>
+		<a href="" class="img"><img alt="sns" src="../image\fin.JPG"
+			height="85px" width="125px"></a>
+		<div class="since">ⓒ Since 1945 Amorepacific, All Rights
+			Reserved.</div>
+			
+	</footer>
+	<!-- ------------------footer끝------------------ -->
+
+
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="../css/layout_join.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<!-- -----------------header시작------------------- -->
+	<header class="header">
+		<div class="header_nav">
+			<!-- 로고 -->
+			<div class="logo">
+				<!-- 메인홈: 절대경로 써주기 -->
+				<a href="/Ex5_Amorepacific/index_a.html"><img alt="logo"
+					src="../image\amorepacific.png"
+					style="width: 170px; height: 16.5px;"></a>
+			</div>
+			<!-- 서브메뉴 -->
+			<nav class="nav_sub">
+				<ul class="list_hea2">
+					<li><a class="b" href="https://www.apgroup.com/int/ko/misc/news/news.html"> NEWS &nbsp;</a></li>
+					<li><a class="c">|</a></li>
+					<li><a class="b" href="/Ex5_Amorepacific/member/login.html">&nbsp;
+							LOGIN</a></li>
+					<!-- 절대경로 -->
+
+				</ul>
+			</nav>
+			<!-- 메인메뉴 -->
+			<nav class="nav_main">
+				<ul class="list_hea1">
+					<li><a class="a" href="#">ABOUT US</a></li>
+					<li><a class="a" href="#">OUR VALUES</a></li>
+					<li><a class="a" href="#">BRANDS</a></li>
+					<li><a class="a" href="#">SUSTAINABILITY</a></li>
+					<li><a class="a" href="#">INVESTORS</a></li>
+				</ul>
+			</nav>
+
+
+
+		</div>
+	</header>
+	<!-- ----------------header 끝-------------------- -->
+	<!-- ----------------contents시작-------------------- -->
+	<div class="contents">
+		<div class="contents_sub">
+		<div class="contents_sub1">
+		<div class="contents_sub2">
+	
+	<div class="contents_3_name">약관동의</div>
+	<div class="line"></div>
+	<br><br>
+	
+	
+	<input id="d1" onclick="check()" type="checkbox">
+	<b>&nbsp;이용약관, 개인정보 수집 및 이용, 위치정보 이용약관(선택),프로모션 안내 메일
+	<br>&nbsp;&nbsp;&nbsp; 
+	수신(선택)에 모두 동의합니다.</b>
+	<br><br>
+	<!-- 전체동의버튼 -->
+
+	<input class="c1" type="checkbox">
+	<b>이용약관 동의</b>(필수)
+	<br><br>
+	<input class="c1" type="checkbox">
+	<b>개인정보 수집 및 이용에 대한 안내</b>(필수)
+	<br><br>
+	<input class="c1" type="checkbox">
+	<b>위치정보 이용약관 동의 </b>(필수)
+	<br><br><br>
+	
+	<span id="agree"><b>개인정보 처리 위탁에 대한 안내</b><br>
+	※ 아모레퍼시픽은 서비스 향상 및 원활한 전산 처리 등을 위하여 이용자의 개인정보 관리를 외부 <br>
+	전문업체에 위탁하고 있습니다. 아모레퍼시픽의 업무를 위탁받는 자 및 업무의 내용은 아모레퍼시픽 <br>
+	홈페이지 https://www.beautypoint.co.kr/footer/privacy/personal.html 에서 확인 하실 수 있습니다.
+	</span>
+	<br><br><br>
+	<button id="b1" onclick="join()">본인인증 확인</button>
+	<!-- 약관동의 안하고 join을 누르면 약관동의하라는 alert띄우기 -->
+
+	<script type="text/javascript">
+		var d1 = document.getElementById("d1");
+		var c1 = document.getElementsByClassName("c1");
+		var b1 = document.getElementById("b1");
+		
+		b1.style.fontSize="large";
+
+		//전체체크
+		d1.addEventListener("click", function() {
+			for (i = 0; i < c1.length; i++) {
+				c1[i].checked = d1.checked;
+			}
+		})
+		//부분체크
+		for (i = 0; i < c1.length; i++) {
+			c1[i].addEventListener("click", function() {
+				//전체 검증 결과를 담을 변수
+				var result = true; //c1[i]이 모두선택되어있을때 d1이 자동체크
+
+				for (j = 0; j < c1.length; j++) {
+					if (!c1[j].checked) {
+						result = false;
+						break;
+					}
+				}
+				
+				d1.checked=result;
+			})
+
+		}
+		
+		//버튼
+		b1.addEventListener("click", function(){
+			if(d1.checked){
+				location.href="./join2.html";
+			}else {
+				alert("약관에 모두 동의요망");
+			}
+		});
+	</script>
+			
+			</div>
+		</div>
+		</div>
+	</div>
+	<!-- ----------------contents끝-------------------- -->
+		<!-- ------------------footer시작------------------ -->
+	<footer class="footer">
+		<div class="footer_nav">
+			<ul class="list_foot">
+				<li>인재채용</li>
+				<li class="e">|</li>
+				<li>고객상담실</li>
+				<li class="e">|</li>
+				<li>방문판매원 찾기</li>
+				<li class="e">|</li>
+				<li>매거진</li>
+				<li class="e">|</li>
+				<li>사이트맵</li>
+				<li class="e">|</li>
+				<li>관련사이트</li>
+				<li class="e">|</li>
+				<li>법적 고지</li>
+				<li class="e">|</li>
+				<li>개인정보 처리방침</li>
+			</ul>
+		</div>
+		<a href="" class="img"><img alt="sns" src="../image\fin.JPG"
+			height="85px" width="125px"></a>
+		<div class="since">ⓒ Since 1945 Amorepacific, All Rights
+			Reserved.</div>
+			
+	</footer>
+	<!-- ------------------footer끝------------------ -->
+	
+</body>
+</html>

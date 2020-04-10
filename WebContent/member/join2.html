@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="../css/layout_join2.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	.success {
+		color: blue;
+		font-size: small;
+		margin-left: 110px;
+	}
+	.fail {
+		color:red;
+		font-size: small;
+		margin-left: 110px;
+	}
+</style>
+</head>
+<body>
+	<!-- -----------------header시작------------------- -->
+	<header class="header">
+		<div class="header_nav">
+			<!-- 로고 -->
+			<div class="logo">
+				<!-- 메인홈: 절대경로 써주기 -->
+				<a href="/Ex5_Amorepacific/index_a.html"><img alt="logo"
+					src="../image\amorepacific.png"
+					style="width: 170px; height: 16.5px;"></a>
+			</div>
+			<!-- 서브메뉴 -->
+			<nav class="nav_sub">
+				<ul class="list_hea2">
+					<li><a class="b" href="https://www.apgroup.com/int/ko/misc/news/news.html"> NEWS &nbsp;</a></li>
+					<li><a class="c">|</a></li>
+					<li><a class="b" href="/Ex5_Amorepacific/member/login.html">&nbsp;
+							LOGIN</a></li>
+					<!-- 절대경로 -->
+
+				</ul>
+			</nav>
+			<!-- 메인메뉴 -->
+			<nav class="nav_main">
+				<ul class="list_hea1">
+					<li><a class="a" href="#">ABOUT US</a></li>
+					<li><a class="a" href="#">OUR VALUES</a></li>
+					<li><a class="a" href="#">BRANDS</a></li>
+					<li><a class="a" href="#">SUSTAINABILITY</a></li>
+					<li><a class="a" href="#">INVESTORS</a></li>
+				</ul>
+			</nav>
+
+
+
+		</div>
+	</header>
+	<!-- ----------------header 끝-------------------- -->
+		<!-- ----------------contents시작-------------------- -->
+		
+<!-- -------------------내용시작----------------------- -->
+	<div class="contents">
+		<div class="contents_sub">
+		<div class="contents_sub1">
+		<div class="contents_sub2">
+		
+	<div class="contents_3_name">아모레퍼시픽<br>회원가입을 환영합니다!</div>
+	<div class="line"></div>
+	
+	<br>
+	<span id="agree"><b>개인정보 처리 위탁에 대한 안내</b><br>
+	※ 아모레퍼시픽은 서비스 향상 및 원활한 전산 처리 등을 위하여 이용자의 개인정보 관리를 외부 <br>
+	전문업체에 위탁하고 있습니다. 아모레퍼시픽의 업무를 위탁받는 자 및 업무의 내용은 아모레퍼시픽 <br>
+	홈페이지 https://www.beautypoint.co.kr/footer/privacy/personal.html 에서 확인 하실 수 있습니다.
+	</span>
+	<br><br><br>
+
+<form action="./join3.html" id="frm">
+		<p>
+			<!-- 최소 6자 이상 -->
+			<!-- keyup -->
+			<div id="idCheck"></div>
+			<input type="text" id="yId" class="tx_design" placeholder=" &nbsp;아이디 (6글자이상인 영문 대,소문자)"> &nbsp;
+		</p>
+		<br>
+		<p>
+			<!-- 최소 6자 이상 -->
+			<!-- blur -->
+			<div id="pwCheck"></div>
+			<input type="password" id="yPw" class="tx_design" placeholder=" &nbsp;비밀번호는 6~16자 영문 대소문자,숫자,특수문자를.."> &nbsp;			
+		</p>
+<br>
+		<p>
+			<!-- blur -->
+			<div id="pwCheck2"></div>
+			<input type="password" id="yPw2" class="tx_design" placeholder=" &nbsp;비밀번호 확인"> &nbsp;			
+		</p>
+<br>
+		<p>
+			<input type="text" class="ch tx_design" placeholder=" &nbsp;이름 (실명으로 입력해주세요)" > &nbsp;
+		</p>
+<br>
+		<p>
+			<input type="text" class="ch tx_design" placeholder=" &nbsp;전화번호 입력"> &nbsp;
+		</p>
+<br>
+		<p>
+			<input type="text" class="ch tx_design"  placeholder=" &nbsp;이메일 입력"> &nbsp;
+		</p>
+		
+
+<br><br><br>
+		<button id="join" onclick="join()">회원가입</button>
+	</form>
+	
+<script type="text/javascript">
+	var yId = document.getElementById("yId");
+	var idCheck = document.getElementById("idCheck");
+	
+	var yPw = document.getElementById("yPw");
+	var pwCheck = document.getElementById("pwCheck");
+
+	var yPw2 = document.getElementById("yPw2");
+	var pwCheck2 = document.getElementById("pwCheck2");
+	
+	var ch = document.getElementsByClassName("ch");
+	
+	var frm = document.getElementById("frm");
+
+	//*************** ID Check *******************
+	var idResult=false;
+	yId.addEventListener("keyup", function() {
+		var size = yId.value.length;
+		if(size>5){
+			idCheck.innerHTML="사용가능한 ID입니다";
+			idCheck.setAttribute("class", "success");
+			idResult=true;
+		}else {
+			idCheck.innerHTML="ID는 6자 이상 입력해 주세요";
+			idCheck.setAttribute("class", "fail");
+			idResult=false;
+		}
+	});
+	
+	//*************** PW Check *******************
+	var pwResult=false;
+	
+	yPw.addEventListener("change", function() {
+		yPw2.value="";
+		ypwResult2=false;
+		pwCheck2.innerHTML="PW가 일치하지 않음";
+		pwCheck2.setAttribute("class", "fail");
+	});
+	
+	yPw.addEventListener("blur", function() {
+		var size = yPw.value.length;
+		if(size>5){
+			pwCheck.innerHTML="사용가능한 PW입니다";
+			pwCheck.setAttribute("class", "success");
+			pwResult=true;
+		}else {
+			pwCheck.innerHTML="PW는 6자 이상 입력해 주세요";
+			pwCheck.setAttribute("class", "fail");
+			pwResult=false;
+		}
+	});
+	
+	//*************** PW2 Check *******************
+	var pwResult2=false;
+	yPw2.addEventListener("blur", function() {
+		if(yPw2.value==yPw.value){
+			pwCheck2.innerHTML="PW가 일치합니다";
+			pwCheck2.setAttribute("class", "success");
+			pwResult2=true;
+		}else {
+			pwCheck2.innerHTML="PW가 일치하지 않습니다";
+			pwCheck2.setAttribute("class", "fail");
+			yPw2.value="";
+			pwResult2=false;
+		}
+		
+	});
+	
+	
+	var join = document.getElementById("join");
+	
+	join.addEventListener("click", function(e){
+		var check=true;
+		for(i=0;i<ch.length;i++){
+			if(ch[i].value.length==0){
+				check=false;
+				break;
+			}
+		}
+		
+		
+		if(!(idResult && pwResult && pwResult2 && check)){
+			alert("필수 요소 입력");
+			yId.focus();
+			e.preventDefault();
+		}else {
+			frm.submit();
+		}
+		
+	});
+</script>	
+
+</div>
+</div>
+</div>
+</div>
+<!-- -------------------내용 끝----------------------- -->
+	<!-- ----------------contents끝-------------------- -->
+		<!-- ------------------footer시작------------------ -->
+	<footer class="footer">
+		<div class="footer_nav">
+			<ul class="list_foot">
+				<li>인재채용</li>
+				<li class="e">|</li>
+				<li>고객상담실</li>
+				<li class="e">|</li>
+				<li>방문판매원 찾기</li>
+				<li class="e">|</li>
+				<li>매거진</li>
+				<li class="e">|</li>
+				<li>사이트맵</li>
+				<li class="e">|</li>
+				<li>관련사이트</li>
+				<li class="e">|</li>
+				<li>법적 고지</li>
+				<li class="e">|</li>
+				<li>개인정보 처리방침</li>
+			</ul>
+		</div>
+		<a href="" class="img"><img alt="sns" src="../image\fin.JPG"
+			height="85px" width="125px"></a>
+		<div class="since">ⓒ Since 1945 Amorepacific, All Rights
+			Reserved.</div>
+			
+	</footer>
+	<!-- ------------------footer끝------------------ -->
+</body>
+</html>
